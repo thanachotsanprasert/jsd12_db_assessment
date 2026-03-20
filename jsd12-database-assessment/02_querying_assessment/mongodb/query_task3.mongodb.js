@@ -10,6 +10,40 @@
 
 // ---------------------------------------------------------------
 // Your thinking process (required)
+/*
+1 ผม re-use code จากข้อ (1)
+code จาก ข้อ 1
+
+use("chrome-burger-db")
+db.menu_items.find({
+  $expr: {
+    $lt: ["$price", NumberDecimal("10.00")]
+  }
+});
+
+2 ผมเปลี่ยน menu_items เป็น ingredients
+3 ผมเปลี่ยน price เป็น stock_level
+4 ผมเปลี่ยน 10.00 เป็น 100.00
+5 ผม recheck output จาก query ถูกต้อง (ไปที่ db indredient) แล้ว eyes scanning
+
+use("chrome-burger-db")
+db.ingredients.find({
+  $expr: {
+    $lt: ["$stock_level", NumberDecimal("100.00")]
+  }
+});
+
+6 code ด้านบน คือคำตอบครับ
+
+หมายเหตุ ผมจะใช้เวลาเสาร์ อาทิตย์นี้ ทำความเข้าใจว่า 
+
+$expr: {
+    $lt: ["$stock_level", NumberDecimal("100.00")]
+  }
+});
+
+ทำงานอย่างไีร เพราะนี่เป็น query ที่ generate จาก ai มา
+*/
 // ---------------------------------------------------------------
 // Before writing your query, explain in your own words how you
 // interpreted the task, what data you need, which collection(s)
@@ -18,3 +52,9 @@
 //
 // Your thinking:
 //
+use("chrome-burger-db")
+db.ingredients.find({
+  $expr: {
+    $lt: ["$stock_level", NumberDecimal("100.00")]
+  }
+});
