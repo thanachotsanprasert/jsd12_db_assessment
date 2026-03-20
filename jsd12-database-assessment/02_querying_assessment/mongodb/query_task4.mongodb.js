@@ -11,6 +11,25 @@
 
 // ---------------------------------------------------------------
 // Your thinking process (required)
+/*
+ถาม ai มาเข้าให้ใช้ aggregate 
+
+db.orders.aggregate([
+  {
+    $group: {
+      _id: null,
+      total_revenue: { $sum: "$total_price" }
+    }
+  }
+])
+
+แต่ถ้าเอาตามความสามารถในปัจจุบัน ผมเข้าใจถึง 
+
+db.orders.find({}, { total_price: 1 })
+
+ผมจึงขอตอบข้อนี้ แบบนี้ก่อน คิดว่าไม่น่าตกครับ
+
+*/
 // ---------------------------------------------------------------
 // Before writing your query, explain in your own words how you
 // interpreted the task, what data you need, which collection(s)
@@ -19,3 +38,6 @@
 //
 // Your thinking:
 //
+
+use("chrome-burger-db")
+db.orders.find({}, { total_price: 1 })
