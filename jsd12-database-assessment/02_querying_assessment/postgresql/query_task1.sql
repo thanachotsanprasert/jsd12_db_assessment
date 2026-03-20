@@ -10,11 +10,12 @@
 
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
-/* 1. โจทย์ให้หาเมนูที่อยู่ใน category side
+/* 
+1. โจทย์ให้หาเมนูที่อยู่ใน category side
 2. เราอยากเรียกตาราง menu ทั้งหมดมาดูก่อน SELECT * FROM MenuItems;
 3. มี side 2 รายการ 
 4. ใช้ WHERE ในการ filter category = Side
-5. SELECT * FROM MenuItems WHERE category = "Side";
+5. SELECT * FROM MenuItems WHERE category = 'Side';
 6. เราก็จะได้ row ที่มีข้อมูลทั้งหมด แต่โจทย์ต้องการเฉพาะ name + price
 7. เราสามารถเลือก column ที่จะแสดงได้จาก SELECT
 8. จากด้านบน SELECT * คือการเรียกตารางทั้งหมด
